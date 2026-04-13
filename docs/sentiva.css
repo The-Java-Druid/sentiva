@@ -57,7 +57,7 @@ header .container {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   font-weight: 800;
   color: var(--primary-color);
   letter-spacing: 1px;
@@ -183,6 +183,31 @@ nav {
     min-width: 0;
   }
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand p {
+    margin: 15px auto;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-image {
+    min-width: 100%;
+  }
 }
 
 /* --- Contact Section Styles --- */
@@ -268,14 +293,6 @@ nav {
   color: #888;
 }
 
-/* --- Mobile Fix for Contact Grid --- */
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
 .main-footer {
   background: var(--primary-color);
   color: white;
@@ -341,17 +358,6 @@ nav {
   opacity: 0.6;
 }
 
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer-brand p {
-    margin: 15px auto;
-  }
-}
-
 .dev-credit {
   margin-top: 12px;
   font-size: 0.8rem;
@@ -405,4 +411,25 @@ nav {
 #lang-toggle:hover {
   border-color: var(--secondary-color);
   background-color: var(--bg-light);
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 0;
+}
+
+.about-text,
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
 }
