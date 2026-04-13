@@ -23,6 +23,10 @@ const initLanguageToggle = () => {
             el.setAttribute('placeholder', el.getAttribute(`data-${lang}-placeholder`));
         });
 
+        // Update Alt Text for images
+        document.querySelectorAll('[data-en-alt]').forEach(el => {
+            el.setAttribute('alt', el.getAttribute(`data-${lang}-alt`));
+        });
         // Update Page Title
         const titleTag = document.querySelector('title[data-en]');
         if (titleTag) {
