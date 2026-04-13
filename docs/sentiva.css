@@ -229,11 +229,6 @@ nav {
     min-width: 100%;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
@@ -258,7 +253,6 @@ nav {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: start;
 }
@@ -281,6 +275,8 @@ nav {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  grid-template-columns: 1fr;
+  max-width: 400px;
 }
 
 .hours-table td {
