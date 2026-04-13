@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentiva Clinic | Compassionate Healthcare in Miami</title>
+    <title data-en="Sentiva Clinic | Compassionate Healthcare in Miami"
+        data-es="Clínica Sentiva | Salud y Compasión en Miami">
+        Sentiva Clinic | Compassionate Healthcare in Miami</title>
     <meta name="description"
         content="Sentiva offers modern primary care and specialized wellness services. Book your consultation today.">
     <meta property="og:title" content="Sentiva Clinic | Compassionate Healthcare in Miami">
@@ -13,6 +15,7 @@
     <meta property="og:image" content="/sentiva/img/photos/sentiva_waitroom.jpeg">
     <link rel="icon" href="img/icon.png" type="image/png">
     <link rel="stylesheet" href="sentiva.css">
+    <script src="js/sentiva.js" defer></script>
 </head>
 
 <body>
@@ -22,30 +25,43 @@
             <span><strong>SENTIVA MEDICAL CENTER</strong></span>
         </div>
         <nav>
-            <a href="#services">Services</a> |
-            <a href="#about">About</a> |
-            <a href="#contact" class="btn">Contact Now</a>
+            <a href="#services" data-en="Services" data-es="Servicios">Services</a> |
+            <a href="#about" data-en="About" data-es="Acerca de">About</a> |
+            <a href="#contact" class="btn" data-en="Contact" data-es="Contactar">Contact</a>
+            <button id="lang-toggle"
+                style="background:none; border:1px solid #ddd; cursor:pointer; padding:5px 10px; border-radius:5px; margin-left:15px;">🇪🇸
+                Español
+            </button>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Your Health, Our Priority.</h1>
-        <p>Experience compassionate, modern care at Sentiva Clinic.</p>
-        <a href="#contact" class="btn">Book a Consultation</a>
+        <h1 data-en="Your Health, Our Priority." data-es="Tu Salud, Nuestra Prioridad.">Your Health, Our Priority.</h1>
+        <p data-en="Experience compassionate, modern care at Sentiva Clinic."
+            data-es="Experimenta atención compasiva y moderna en la Clínica Sentiva.">Experience compassionate, modern
+            care at Sentiva Clinic.</p>
+        <a href="#contact" class="btn" data-en="Book a Consultation" data-es="Reservar una Consulta">Book a
+            Consultation</a>
     </section>
 
     <section id="services" class="services">
         <div class="service-card">
-            <h3>General Wellness</h3>
-            <p>Comprehensive checkups and preventive care for all ages.</p>
+            <h3 data-en="General Wellness" data-es="Bienestar General">General Wellness</h3>
+            <p data-en="Comprehensive checkups and preventive care for all ages."
+                data-es="Chequeos completos y atención preventiva para todas las edades.">Comprehensive checkups and
+                preventive care for all ages.</p>
         </div>
         <div class="service-card">
-            <h3>Specialized Care</h3>
-            <p>Tailored treatments focusing on chronic condition management.</p>
+            <h3 data-en="Specialized Care" data-es="Cuidado Especializado">Specialized Care</h3>
+            <p data-en="Tailored treatments focusing on chronic condition management."
+                data-es="Tratamientos personalizados enfocados en la gestión de condiciones crónicas.">Tailored
+                treatments focusing on chronic condition management.</p>
         </div>
         <div class="service-card">
-            <h3>Diagnostics</h3>
-            <p>State-of-the-art testing and imaging on-site.</p>
+            <h3 data-en="Diagnostics" data-es="Diagnósticos">Diagnostics</h3>
+            <p data-en="State-of-the-art testing and imaging on-site."
+                data-es="Pruebas y radiología de última generación en el lugar.">State-of-the-art testing and imaging
+                on-site.</p>
         </div>
     </section>
 
@@ -53,9 +69,11 @@
         <div class="contact-grid">
             <div class="contact-info">
                 <h2 class="section-title" style="text-align: left;">Find Us</h2>
-                <p>We are located in the heart of Miami, dedicated to providing accessible care for our community.</p>
+                <p data-en="We are located in the heart of Miami, dedicated to providing accessible care for our community."
+                    data-es="Estamos ubicados en el corazón de Miami, dedicados a proporcionar atención accesible para nuestra comunidad.">
+                    We are located in the heart of Miami, dedicated to providing accessible care for our community.</p>
                 <div class="info-item">
-                    <strong>📍 Address</strong>
+                    <strong data-en="📍 Address" data-es="📍 Dirección">📍 Address</strong>
                     <a href="https://www.google.com/maps/search/?api=1&query=9260+SW+72+ST+STE+107,+MIAMI,+FL+33173"
                         target="_blank">
                         <p>9260 SW 72 ST STE 107
@@ -64,59 +82,68 @@
                     </a>
                 </div>
                 <div class="info-item">
-                    <strong>📞 Phone:</strong><a href="tel:(786) 882-4417">(786) 882-4417</a></p>
-                    <strong>📞 Phone:</strong><a href="tel:(786) 216-3351">(786) 216-3351</a></p>
+                    <strong data-en="📞 Phone" data-es="📞 Teléfono">📞 Phone:</strong><a
+                        href="tel:(786) 882-4417">(786)
+                        882-4417</a></p>
+                    <strong data-en="📞 Phone" data-es="📞 Teléfono">📞 Phone:</strong><a
+                        href="tel:(786) 216-3351">(786)
+                        216-3351</a></p>
                 </div>
                 <div class="info-item">
-                    <strong>⏰ Hours of Operation</strong>
+                    <strong data-en="⏰ Hours of Operation" data-es="⏰ Horario de Atención">⏰ Hours of Operation</strong>
                     <table class="hours-table">
                         <tr>
-                            <td>Mon - Fri:</td>
+                            <td data-en="Monday - Friday" data-es="Lunes - Viernes">Mon - Fri:</td>
                             <td>8:00 AM - 4:30 PM</td>
                         </tr>
                         <tr>
-                            <td>Saturday:</td>
-                            <td>Closed</td>
+                            <td data-en="Saturday" data-es="Sábado">Sat:</td>
+                            <td data-en="Closed" data-es="Cerrado">Closed</td>
                         </tr>
                         <tr>
-                            <td>Sunday:</td>
-                            <td>Closed</td>
+                            <td data-en="Sunday" data-es="Domingo">Sun:</td>
+                            <td data-en="Closed" data-es="Cerrado">Closed</td>
                         </tr>
                     </table>
                 </div>
-                <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-                <script src="https://elfsightcdn.com/platform.js" async></script>
-                <div class="elfsight-app-43898736-c4bd-45e7-9773-23c01b2adc4f" data-elfsight-app-lazy></div>
             </div>
+            <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-43898736-c4bd-45e7-9773-23c01b2adc4f" data-elfsight-app-lazy></div>
+        </div>
         </div>
     </section>
     <footer class="main-footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <span class="logo">SENTIVA</span>
-                <p>Modern healthcare tailored to your vitality.</p>
+                <div class="logo"><img src="img/logo_white.png" alt="Sentiva Clinic Logo"></div>
+                <p data-en="Modern healthcare tailored to your vitality."
+                    data-es="Atención médica moderna adaptada a su vitalidad.">Modern healthcare tailored to your
+                    vitality.</p>
             </div>
 
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
+                    <li><a href="#about" data-en="About Us" data-es="Acerca de Nosotros">About Us</a></li>
+                    <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer-social">
-                <h4>Follow Us</h4>
+                <h4 data-en="Follow Us" data-es="Síguenos">Follow Us</h4>
                 <div class="social-icons">
-                    <a href="#">FB</a>
+                    <!--<a href="#">FB</a> -->
                     <a href="https://www.instagram.com/sentivamedicalcenter/" target="_blank"> IG </a>
-                    <a href=" #">LI</a>
+                    <!--<a href=" #">LI</a> -->
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Sentiva Clinic. All rights reserved.</p>
+            <p data-en="&copy; 2026 Sentiva Clinic. All rights reserved."
+                data-es="&copy; 2026 Sentiva Clinic. Todos los derechos reservados.">&copy; 2026 Sentiva Clinic. All
+                rights reserved.</p>
             <p class="dev-credit">
                 Built with ❤️ by <a href="https://github.com/the-java-druid" target="_blank">Alied</a>
             </p>

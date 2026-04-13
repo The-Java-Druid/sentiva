@@ -359,3 +359,14 @@ nav a:hover {
   color: var(--secondary-color);
   border-bottom-color: var(--secondary-color);
 }
+
+/* Hide elements with translation data until the script runs */
+[data-en] {
+  visibility: hidden;
+}
+
+/* Show them once the script (or CSS) adds a 'loaded' or lang class */
+.lang-en [data-en],
+.lang-es [data-en] {
+  visibility: visible;
+}
