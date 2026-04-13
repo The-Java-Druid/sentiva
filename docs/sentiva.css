@@ -191,10 +191,16 @@ nav {
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 0 20px;
   }
 
   .footer-brand p {
     margin: 15px auto;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
   }
 
   .about-wrapper {
@@ -207,6 +213,12 @@ nav {
   .about-text,
   .about-image {
     min-width: 100%;
+  }
+
+  body,
+  html {
+    overflow-x: hidden;
+    width: 100%;
   }
 }
 
@@ -298,6 +310,9 @@ nav {
   color: white;
   padding: 60px 0 20px;
   margin-top: 80px;
+  width: 100%;
+  position: relative;
+  left: 0;
 }
 
 .footer-content {
