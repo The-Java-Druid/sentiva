@@ -1,6 +1,6 @@
 /* --- Variables & Reset --- */
 :root {
-  --primary-color: #004d61;
+  --primary-color: #1a3d9b;
   /* Deep Teal - Trust */
   --secondary-color: #4db6ac;
   /* Seafoam - Health */
@@ -8,7 +8,7 @@
   /* Soft Coral - Humanity */
   --bg-light: #f4f9f9;
   /* Very Light Teal background */
-  --text-dark: #2c3e50;
+  --text-dark: #1a3d9b;
   --text-light: #ffffff;
   --transition: all 0.3s ease;
 }
@@ -61,6 +61,13 @@ header .container {
   font-weight: 800;
   color: var(--primary-color);
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 75px;
+  margin-right: 10px;
 }
 
 nav a {
