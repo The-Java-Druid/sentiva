@@ -374,6 +374,58 @@ nav {
   border-color: transparent;
 }
 
+/* --- Modal Background --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+/* --- Modal Box --- */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  /*max-height: 75%;
+  max-width: 500px; */
+  height: 90vh;
+  margin: 5vh auto;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.modal-text {
+  margin: 20px 0;
+  line-height: 1.8;
+  color: #555;
+  text-align: left;
+}
+
+.staff-photo-modal {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid var(--bg-light);
+  max-width: 90%;
+  max-height: calc(100vh - 500px);
+}
+
 .privacy-note {
   font-size: 0.75rem;
   text-align: center;
