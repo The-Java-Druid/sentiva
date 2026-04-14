@@ -50,10 +50,9 @@ const initLanguageToggle = () => {
     // 3. Initial Run
     updateContent(currentLang);
 };
-// Run when the DOM is ready (though 'defer' handles this, this is a safe pattern)
 document.addEventListener('DOMContentLoaded', initLanguageToggle);
 
-// 1. Staff Data Object
+// Staff Data Object
 const staffData = {
     "President and CEO": {
         "email": "ceo@sentiva.com",
