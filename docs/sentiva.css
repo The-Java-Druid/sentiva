@@ -233,6 +233,22 @@ nav a {
     min-width: 100%;
   }
 
+  .modal-content {
+    width: 95%;
+    overflow-y: auto;
+    /*
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 40px;
+    border-radius: 20px;
+    height: 90vh;
+    margin: 5vh auto;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    */
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
@@ -397,8 +413,6 @@ nav a {
   padding: 40px;
   border-radius: 20px;
   width: 90%;
-  /*max-height: 75%;
-  max-width: 500px; */
   height: 90vh;
   margin: 5vh auto;
   position: relative;
