@@ -51,60 +51,40 @@ const initLanguageToggle = () => {
     updateContent(currentLang);
 };
 
-const initStaffModal = () => {
-    // 1. Staff Data Object
-    const staffData = {
-        "President and CEO": {
-            "email": "ceo@sentiva.com",
-            "bio": {
-                "en": "Dr. Garcia has over 15 years of experience in internal medicine, specializing in preventative care for the Miami community.",
-                "es": "La Dra. García tiene más de 15 años de experiencia en medicina interna, especializándose en cuidados preventivos para la comunidad de Miami."
-            }
-        },
-        "Dr. Karajencian": {
-            "email": "karajencian@sentiva.com",
-            "bio": {
-                "en": "Dr. Karajencian has over 10 years of experience in internal medicine, specializing in preventative care for the Miami community.",
-                "es": "El Dr. Karajencian tiene más de 10 años de experiencia en medicina interna, especializándose en cuidados preventivos para la comunidad de Miami."
-            }
-        },
-        "Maikel Hernández": {
-            "email": "hernandez@sentiva.com",
-            "bio": {
-                "en": "Maikel Hernández has over 5 years of experience in internal medicine, specializing in preventative care for the Miami community.",
-                "es": "Maikel Hernández tiene más de 5 años de experiencia en medicina interna, especializándose en cuidados preventivos para la comunidad de Miami."
-            }
-        },
-        "Elena Rodriguez": {
-            "email": "elena@sentiva.com",
-            "bio": {
-                "en": "Elena Rodriguez has over 8 years of experience in internal medicine, specializing in preventative care for the Miami community.",
-                "es": "Elena Rodriguez tiene más de 8 años de experiencia en medicina interna, especializándose en cuidados preventivos para la comunidad de Miami."
-            }
-        },
-    };
+let staffDataCache = null; // Memory cache for JSON data
 
-    // 2. Logic to Open Modal
+const loadStaffData = async () => {
+    fetch('data/staff.json')
+        .then(response => response.json())
+        .then(data => {
+            staffDataCache = data; // Assign once the JSON is ready
+        })
+        .catch(err => console.error("Error loading staff data:", err));
+};
+
+const initStaffModal = () => {
     document.querySelectorAll('.team-card').forEach(card => {
         card.addEventListener('click', () => {
             const name = card.querySelector('.staff-name').innerText;
             const role = card.querySelector('.staff-role').innerText;
             const img = card.querySelector('img').src;
-            const data = staffData[name];
+            const data = staffDataCache ? staffDataCache[name] : null;
 
             document.getElementById('modal-name').innerText = name;
-            document.getElementById('modal-role').innerText = role;
             document.getElementById('modal-img').src = img;
-            if (data) {
-                document.getElementById('modal-email').innerText = data.email;
-                document.getElementById('modal-email').href = `mailto:${data.email}`;
-                // Determine bio language based on current session
-                const currentLang = localStorage.getItem('preferredLang') || 'en';
-                document.getElementById('modal-bio').innerText = data.bio[currentLang];
-            } else {
-                document.getElementById('modal-email').innerText = '<not available>';
-                document.getElementById('modal-bio').innerText = '';
-            }
+            document.getElementById('modal-role').innerText = role;
+            /*
+                         if (data) {
+                            document.getElementById('modal-email').innerText = data.email;
+                            document.getElementById('modal-email').href = `mailto:${data.email}`;
+                            // Determine bio language based on current session
+                            const currentLang = localStorage.getItem('preferredLang') || 'en';
+                            document.getElementById('modal-bio').innerText = data.bio[currentLang];
+                        } else {
+                            document.getElementById('modal-email').innerText = '<not available>';
+                            document.getElementById('modal-bio').innerText = '';
+                        }
+             */
             document.getElementById('bio-modal').style.display = 'block';
         });
     });
