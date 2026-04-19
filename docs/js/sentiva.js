@@ -73,18 +73,20 @@ const initStaffModal = () => {
             document.getElementById('modal-name').innerText = name;
             document.getElementById('modal-img').src = img;
             document.getElementById('modal-role').innerText = role;
-            /*
-                         if (data) {
-                            document.getElementById('modal-email').innerText = data.email;
-                            document.getElementById('modal-email').href = `mailto:${data.email}`;
-                            // Determine bio language based on current session
-                            const currentLang = localStorage.getItem('preferredLang') || 'en';
-                            document.getElementById('modal-bio').innerText = data.bio[currentLang];
-                        } else {
-                            document.getElementById('modal-email').innerText = '<not available>';
-                            document.getElementById('modal-bio').innerText = '';
-                        }
-             */
+            if (data) {
+                /*
+                                document.getElementById('modal-email').innerText = data.email;
+                                document.getElementById('modal-email').href = `mailto:${data.email}`;
+                                // Determine bio language based on current session
+                                */
+                const currentLang = localStorage.getItem('preferredLang') || 'en';
+                document.getElementById('modal-bio').innerText = data.bio[currentLang];
+            } else {
+                /*
+                document.getElementById('modal-email').innerText = '<not available>';
+                */
+                document.getElementById('modal-bio').innerText = '';
+            }
             document.getElementById('bio-modal').style.display = 'block';
         });
     });
