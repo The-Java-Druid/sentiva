@@ -104,6 +104,7 @@ const initStaffModal = () => {
 }
 
 // Run when the DOM is ready (though 'defer' handles this, this is a safe pattern)
+document.addEventListener('DOMContentLoaded', loadStaffData);
 document.addEventListener('DOMContentLoaded', initLanguageToggle);
 document.addEventListener('DOMContentLoaded', initStaffModal);
 
