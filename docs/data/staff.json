@@ -2,8 +2,8 @@
     "Sandra Roldán y Lenia Díaz": {
         "email": "sentivamedicalcenter@gmail.com",
         "bio": {
-            "en": "",
-            "es": ""
+            "en": "Driven by passion, dedicated to our community",
+            "es": "Impulsadas por la pasión, dedicadas a nuestra comunidad"
         }
     },
     "Dr. Andres A. Albornoz, MD, FACP, FAASLD": {
@@ -14,6 +14,13 @@
         }
     },
     "Noel Molina Carpio, APRN-FNP": {
+        "email": "sentivamedicalcenter@gmail.com",
+        "bio": {
+            "en": "",
+            "es": ""
+        }
+    },
+    "Bertha Viera": {
         "email": "sentivamedicalcenter@gmail.com",
         "bio": {
             "en": "",
