@@ -38,6 +38,11 @@ const initLanguageToggle = () => {
         // Add a class to body for CSS styling hooks
         document.body.classList.remove('lang-en', 'lang-es');
         document.body.classList.add(`lang-${lang}`);
+        const privacyLink = document.getElementById('privacy-link');
+        if (privacyLink) {
+            // Dynamically update the PDF link based on current language
+            privacyLink.href = `docs/privacy-notice-${lang}.pdf`;
+        }
     };
 
     // 2. Add Event Listener

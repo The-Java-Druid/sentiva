@@ -463,7 +463,7 @@ nav a {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
   gap: 40px;
 }
 
@@ -508,6 +508,22 @@ nav a {
   padding: 8px 12px;
   border-radius: 5px;
   font-size: 0.8rem;
+}
+
+/* --- Privacy Link Compliance Styling --- */
+.footer-privacy-notice {
+  margin-top: 10px;
+}
+
+.privacy-notice-link a {
+  color: var(--text-muted, #666666);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.privacy-notice-link a:hover {
+  color: var(--primary-color, #0056b3);
 }
 
 .footer-bottom {
