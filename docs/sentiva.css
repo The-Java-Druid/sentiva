@@ -463,8 +463,8 @@ nav a {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 2fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 .footer-brand p {
@@ -529,6 +529,7 @@ nav a {
 .footer-bottom {
   text-align: center;
   margin-top: 60px;
+  margin-left: 10px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.8rem;
